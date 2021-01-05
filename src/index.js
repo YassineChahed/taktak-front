@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UiContextProvider } from './context/UiContext';
 
 ReactDOM.render(
   <React.StrictMode>
+     <UiContextProvider>
     <App />
+    </UiContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

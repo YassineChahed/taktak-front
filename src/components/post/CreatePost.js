@@ -122,8 +122,8 @@ function CreatePost(props) {
           </div>
               </Card>
             </Collapse>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
       </div>
     );
   }

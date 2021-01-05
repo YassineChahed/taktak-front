@@ -1,35 +1,41 @@
-import React , {useState} from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
-import { GridList, GridListTile } from "@material-ui/core";
+import { Collapse, GridList, GridListTile } from "@material-ui/core";
 import PostModal from "./PostModal";
+import { UiContext } from "../../context/UiContext";
+import CommentsBox from "./CommentsBox";
 
 function PostStandard(props) {
+  const [openComments, setopenComments] = useState(false)
   const { post, user } = props;
-  const {content} = post
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const { content,comments } = post;
+  const { handleOpenPostModal } = useContext(UiContext);
+  const [commentValueInput, setCommentValueInput] = useState("")
+  function handleChange(e){
+    setCommentValueInput(e.target.value)
+    console.log(commentValueInput)
+  }
+  function handleOpenComments(){
+    setopenComments(!openComments)
+   
+  }
   return (
     <div className="card post-card">
       <div className="post-card-header">
-        <div className="post-card-photo" />
-        {/* <img src={post.content} /> */}
-
+        <div className="post-card-photo" >
         <GridList cellHeight={160} cols={3}>
           {content.map((el) => (
-            <GridListTile key={el.postId} onClick={handleOpen}>
-              <img style={{cursor : 'pointer'}} button src={el} onClick={handleOpen} />
-              <PostModal open={open} />
+            <GridListTile key={el.postId}>
+              <img
+                style={{ cursor: "pointer" }}
+                button
+                onClick={(e) => handleOpenPostModal(e, content)}
+                src={el}
+              />
             </GridListTile>
-            
           ))}
         </GridList>
+        </div>
       </div>
       <div className="post-card-body">
         <div className="user-who-post-wrapper">
@@ -69,7 +75,7 @@ function PostStandard(props) {
           <div className="post-card-comments">
             <i className="icon-comment" />
             <span className="comments-number">{post.commentsNumber}</span>
-            <span className="comments-show-more">Afficher commentaires</span>
+            <span button onClick={handleOpenComments} className="comments-show-more">Afficher commentaires</span>
           </div>
           <div className="post-card-comment-button">
             <i className="icon-send"> </i>
@@ -85,6 +91,9 @@ function PostStandard(props) {
               placeholder="Commenter ce post"
               className="post-card-comment-input-field"
               type="text"
+              value={commentValueInput}
+              name="commentInput"
+              onChange={handleChange}
             />
             <div className="comment-options">
               <i className="icon-camera" />
@@ -93,6 +102,10 @@ function PostStandard(props) {
             </div>
           </div>
         </div>
+       
+        <Collapse in={openComments} timeout="auto" unmountOnExit>
+        <CommentsBox comments={comments}/>
+        </Collapse>
       </div>
     </div>
   );

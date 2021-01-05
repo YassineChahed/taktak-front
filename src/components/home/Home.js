@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import CreatePost from "../post/CreatePost";
 import PostStandard from "../post/PostStandard";
 import Stories from "../stories/Stories";
+import PostModal from "../post/PostModal";
+import { UiContext } from "../../context/UiContext";
+import Comment from "../post/Comment";
+import Suggestions from "../suggestions/Suggestions";
 //  import Flickity from 'react-flickity-component'
 // const Flickity = require('flickity');
 
 function Home() {
+  const { openModalPost, setOpenModalPost } = useContext(UiContext);
+  const { contentInPostModal, setContentInPostModal } = useContext(UiContext);
+  const { indexOfClickedElement, setIndexOfClickedElement } = useContext(
+    UiContext
+  );
+  const { handleClosePostModal } = useContext(UiContext);
   const posts = [
     {
       postId: 1,
-      content: ["assets/img/image1.png","assets/img/image1.png","assets/img/image1.png"],
+      content: [
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/100/300",
+        "https://picsum.photos/300/300",
+      ],
       handler: {
         name: "Francesco Boti",
         profileImage: "assets/img/avatar.png",
@@ -18,10 +32,42 @@ function Home() {
       commentsNumber: "23",
       location: " 9ahwet essou9",
       description: "this is a description ........",
+      comments: [
+        {
+          commentHandler: {
+            firstName: "so7leb",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "commentaire so7leb",
+        },
+        {
+          commentHandler: {
+            firstName: "ma9arouna",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "ma9arouna commentaire",
+        },
+        {
+          commentHandler: {
+            firstName: "mar9A",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "commentaire mar9a",
+        },
+      ],
     },
     {
       postId: 2,
-      content: ["assets/img/image1.png","assets/img/image1.png","assets/img/image1.png","assets/img/image1.png","assets/img/image1.png","assets/img/image1.png","assets/img/image1.png","assets/img/image1.png",],
+      content: [
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+        "assets/img/image1.png",
+      ],
       handler: {
         name: "Amir Bouker",
         profileImage: "assets/img/avatar.png",
@@ -30,6 +76,29 @@ function Home() {
       commentsNumber: "111",
       location: " 9ahwet JS",
       description: "this is a description ........",
+      comments: [
+        {
+          commentHandler: {
+            firstName: "so7leb",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "commentaire so7leb",
+        },
+        {
+          commentHandler: {
+            firstName: "ma9arouna",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "ma9arouna commentaire",
+        },
+        {
+          commentHandler: {
+            firstName: "mar9A",
+            profileImage: "assets/img/avatar.png",
+          },
+          content: "commentaire mar9a",
+        },
+      ],
     },
   ];
   return (
@@ -39,6 +108,13 @@ function Home() {
           <div className="feeds-page-content-feed">
             <div className="feed-main">
               <CreatePost />
+          
+              <PostModal
+                data={contentInPostModal}
+                index={indexOfClickedElement}
+                open={openModalPost}
+                handleClose={handleClosePostModal}
+              />
               <PostStandard
                 post={posts[0]}
                 user={{
@@ -46,13 +122,14 @@ function Home() {
                   profileImage: "assets/img/avatar.png",
                 }}
               />
-               <PostStandard
+              <PostStandard
                 post={posts[1]}
                 user={{
                   name: "moula el bach",
                   profileImage: "assets/img/avatar.png",
                 }}
               />
+                  <Suggestions/>
               <div className="card post-card">
                 <div className="post-card-header">
                   <div className="post-card-photo" />
@@ -222,19 +299,15 @@ function Home() {
                     </div>
                   </div>
                   <div className="post-card-comments-list">
-                    <div className="who-comment">
-                      <div className="who-comment-info">
-                        <img src="assets/img/avatar.png" />
-                        <span className="who-comment-info-username">Alex </span>
-                      </div>
-                      <div className="who-comment-info-description">
-                        Proin sit amet ipsum eget ante venenatis posuere.
-                        Maecenas diam risus, accumsan at facilisis sit amet,
-                        eleifend et arcu. Nam viverra pharetra condimentum.
-                        Vestibulum dui metus, fringilla sed facilisis ut, congue
-                        ut tortor.
-                      </div>
-                    </div>
+                    <Comment
+                      comment={{
+                        commentHandler: {
+                          firstName: "so7leb",
+                          profileImage: "assets/img/avatar.png",
+                        },
+                        content: "commentaire ghoul",
+                      }}
+                    />
                     <div className="who-comment">
                       <div className="who-comment-info">
                         <img src="assets/img/avatar.png" />
@@ -253,7 +326,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="interesting-profiles">
+              {/* <div className="interesting-profiles">
                 <div className="interesting-profiles-header">
                   <h3 className="interesting-profiles-header-title">
                     Profils intéressants à suivre
@@ -297,6 +370,7 @@ function Home() {
                           </div>
                         </div>
                       </div>
+                      
                       <div>
                         <div className="profile-follow-card">
                           <div className="profile-follow-card-header">
@@ -536,6 +610,7 @@ function Home() {
                   </div>
                 </div>
               </div>
+              */}
               <div className="card restaurant-post-card">
                 <div className="restaurant-my-besty-button">
                   <button>

@@ -329,7 +329,8 @@
             font-weight: normal;
             font-size: 3rem;
             color: #484848;
-            opacity: 0.5; }
+            opacity: 0.5;
+           }
   .login-page .orbit-container {
     overflow: visible;
     outline: none; }
