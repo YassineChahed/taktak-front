@@ -29,7 +29,7 @@ function UiContextProvider({ children }) {
 
   const [signUpPageNumber, setSignUpPageNumber] = useState(1)
   const [signUpForm, setSignUpForm] = useState({firstName : "",lastName:"",email:"",phone:"",password:"",verifiedPassword:""})
-  const [loginForm, setLoginForm] = useState({email:"",password:""})
+  const [loginForm, setLoginForm] = useState({email:"",password:"",remeberMe:false,keepMe:false})
   return (
     <UiContext.Provider
       value={{
