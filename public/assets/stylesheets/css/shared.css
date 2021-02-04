@@ -1406,7 +1406,7 @@
         top: -0.2rem;
         right: -0.2rem; }
   .chatt .convesation-open {
-    display: none;
+    display: block;
     z-index: 9999;
     width: 42rem;
     height: 50rem;
@@ -1556,7 +1556,7 @@
       .chatt .convesation-open .discussion-bottom .icons img {
         padding-right: 2rem; }
   .chatt .convesation-with-restaurant {
-    display: none;
+    display: block;
     width: 42rem;
     height: 50rem;
     z-index: 99999999;
@@ -1763,8 +1763,8 @@
     right: 1.5rem;
     width: 41rem;
     margin-left: 4rem;
-    height: 7rem;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /* height: 70rem; */
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); */
     box-shadow: -1px -26px 23px -25px rgba(255, 105, 0, 0.19); }
     .chatt .conversation .open-button {
       padding: 0 2rem;
@@ -1842,15 +1842,17 @@
           top: 0;
           right: -0.3rem; }
     .chatt .conversation .form-container {
-      display: none;
+      display: flex;
       background-color: white;
-      width: 41rem; }
+      flex-direction: column;
+      /* width: 41rem; } */}
       .chatt .conversation .form-container .list-online-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
-        margin-bottom: 2rem; }
+        margin-bottom: 2rem;
+        cursor : pointer; }
         .chatt .conversation .form-container .list-online-header .list-online-left-side i {
           cursor: pointer;
           color: #ff6900;
@@ -1876,7 +1878,7 @@
         overflow-y: scroll;
         height: 45rem; }
         .chatt .conversation .form-container .list-users-online::-webkit-scrollbar {
-          display: none; }
+          display: block; }
         .chatt .conversation .form-container .list-users-online .online-profile {
           cursor: pointer;
           display: grid;
@@ -1884,7 +1886,7 @@
           align-items: center;
           margin-bottom: 1rem;
           padding: 0 2rem;
-          margin-bottom: 1rem; }
+          }
           .chatt .conversation .form-container .list-users-online .online-profile .online-profile-img {
             width: 4rem; }
           .chatt .conversation .form-container .list-users-online .online-profile .online-profile-name {
@@ -1942,7 +1944,7 @@
   .chatt .conversation-hover {
     width: 9rem; }
     .chatt .conversation-hover .open-button .title, .chatt .conversation-hover .open-button i, .chatt .conversation-hover .open-button span {
-      display: none; }
+      display: block; }
     .chatt .conversation-hover .form-container {
       width: 8rem; }
       .chatt .conversation-hover .form-container .list-online-header .list-online-right-side {

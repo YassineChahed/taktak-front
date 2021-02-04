@@ -1,0 +1,282 @@
+ .post-card-body {
+    padding: 2rem; }
+     .post-card-body .post-card-body-description {
+      padding-left: 5rem;
+      font-size: 1.2rem;
+      padding-right: 1rem; }
+       .post-card-body .post-card-body-description .description-note {
+        margin-bottom: 1rem; }
+         .post-card-body .post-card-body-description .description-note .note {
+          font-weight: bold;
+          font-size: 1.4rem;
+          color: #ff6900;
+          opacity: 0.8;
+          margin-right: 1.5rem; }
+         .post-card-body .post-card-body-description .description-note .date {
+          font-weight: bold;
+          font-size: 1.4rem;
+          text-align: left;
+          color: #484848;
+          opacity: 0.8; }
+     .post-card-body .post-card-body-description-user {
+      font-size: 1.2rem;
+      padding-right: 1rem; }
+       .post-card-body .post-card-body-description-user .description-note {
+        margin-bottom: 1rem; }
+         .post-card-body .post-card-body-description-user .description-note .note {
+          font-weight: bold;
+          font-size: 1.4rem;
+          color: #ff6900;
+          opacity: 0.8;
+          margin-right: 1.5rem; }
+         .post-card-body .post-card-body-description-user .description-note .date {
+          font-weight: bold;
+          font-size: 1.4rem;
+          text-align: left;
+          color: #484848;
+          opacity: 0.8; }
+     .post-card-body .user-who-post-wrapper .user-who-post {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+       .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info {
+        display: flex;
+        align-items: center; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info .user-who-post-info-avatar {
+          margin-right: 1rem; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info .user-who-post-info-avatar img {
+            height: 4rem;
+            width: 4rem;
+            object-fit: cover; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info .user-who-post-info-info .user-username {
+          font-weight: bold;
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          color: #484848; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info .user-who-post-info-info .user-about {
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+          color: #484848;
+          opacity: 0.8;
+          margin-top: 0.5rem; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-info .user-who-post-info-info .user-about i {
+            font-weight: normal;
+            font-size: 1.4rem;
+            color: #484848;
+            opacity: 0.8; }
+       .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options {
+        display: flex;
+        align-items: center; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .header-note {
+          padding: 0 1rem;
+          border-radius: 5px;
+          background-color: #ff6900;
+          display: flex;
+          align-items: center;
+          height: 3.5rem; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .header-note span {
+            font-weight: normal;
+            font-size: 1.6rem;
+            text-align: center;
+            color: #fff; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .follow-button {
+          margin-right: 3rem;
+          cursor: pointer;
+          background: #ffa500;
+          color: white;
+          padding: 0 1rem;
+          height: 4rem;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          outline: none; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .follow-button span {
+            font-weight: normal;
+            font-size: 1.4rem;
+            color: #fff; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .follow-button i {
+            margin-right: 1rem;
+            font-weight: normal;
+            font-size: 1.4rem;
+            color: #fff; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .raiting {
+          margin-right: 2rem; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .raiting i {
+            color: #ffa500;
+            font-size: 1rem;
+            font-weight: normal; }
+         .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .more-options {
+          display: flex;
+          align-items: center; }
+           .post-card-body .user-who-post-wrapper .user-who-post .user-who-post-options .more-options i {
+            cursor: pointer;
+            font-size: 4px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+           .post-card-footer .post-card-social-info {
+                padding: 2rem;
+                display: flex;
+                align-items: center; }
+               .post-card-footer .post-card-social-info .post-card-likes {
+                  margin-right: 5rem;
+                  display: flex;
+                  align-items: center; }
+                 .post-card-footer .post-card-social-info .post-card-likes i {
+                    color: #ff6900;
+                    font-size: 2.4rem;
+                    margin-right: 1rem;
+                    font-weight: normal; }
+                 .post-card-footer .post-card-social-info .post-card-likes .likes-number {
+                    font-weight: 300;
+                    font-size: 2.2rem;
+                    color: #484848; }
+               .post-card-footer .post-card-social-info .post-card-comments {
+                  display: flex;
+                  align-items: center; }
+                 .post-card-footer .post-card-social-info .post-card-comments i {
+                    color: #ff6900;
+                    font-size: 2.4rem;
+                    margin-right: 1rem; }
+                 .post-card-footer .post-card-social-info .post-card-comments .comments-number {
+                    margin-right: 3rem;
+                    font-weight: 300;
+                    font-size: 2.2rem;
+                    color: #484848; }
+                 .post-card-footer .post-card-social-info .post-card-comments .comments-show-more {
+                    cursor: pointer;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    color: #ff6900; }
+               .post-card-footer .post-card-social-info .post-card-comment-button {
+                  margin-left: auto;
+                  cursor: pointer;
+                  outline: none; }
+                 .post-card-footer .post-card-social-info .post-card-comment-button i {
+                    font-size: 2.4rem;
+                    color: #ff6900;
+                    font-weight: normal; }
+             .post-card-footer .post-card-comment {
+                padding: 2rem;
+                background: #f8f7fa;
+                display: flex;
+                align-items: center; }
+               .post-card-footer .post-card-comment .post-card-comment-avatar {
+                  margin-right: 3rem;
+                  display: flex;
+                  align-items: center; }
+                 .post-card-footer .post-card-comment .post-card-comment-avatar i {
+                    font-weight: normal;
+                    font-size: 1.3rem;
+                    color: #484848;
+                    cursor: pointer; }
+                 .post-card-footer .post-card-comment .post-card-comment-avatar img {
+                    display: block;
+                    max-width: 3rem;
+                    height: 3rem;
+                    width: 3rem;
+                    margin-right: 0.8rem; }
+               .post-card-footer .post-card-comment .post-card-comment-input {
+                  width: 100%;
+                  position: relative; }
+                 .post-card-footer .post-card-comment .post-card-comment-input .post-card-comment-input-field {
+                    width: 100%;
+                    height: 4.5rem;
+                    background: #fff;
+                    border: 1px solid #f0f0f0;
+                    outline: none;
+                    padding-left: 2rem;
+                    padding-right: 10.5rem;
+                    border-radius: 5px;
+                    font-size: 1.5rem;
+                    color: #484848;
+                    outline: none; }
+                   .post-card-footer .post-card-comment .post-card-comment-input .post-card-comment-input-field::placeholder {
+                      font-weight: normal;
+                      font-size: 1.4rem;
+                      text-align: left;
+                      color: #484848;
+                      opacity: 0.5; }
+                 .post-card-footer .post-card-comment .post-card-comment-input .comment-options {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 4.5rem;
+                    display: flex;
+                    align-items: center; }
+                   .post-card-footer .post-card-comment .post-card-comment-input .comment-options i {
+                      font-size: 1.6rem;
+                      cursor: pointer;
+                      height: 1.4rem;
+                      width: auto;
+                      margin-right: 2rem; }
+             .post-card-footer .post-card-comments-list {
+                padding: 2rem; }
+               .post-card-footer .post-card-comments-list .who-comment {
+                  margin-bottom: 2rem; }
+                 .post-card-footer .post-card-comments-list .who-comment:last-child {
+                    margin-bottom: 0; }
+                 .post-card-footer .post-card-comments-list .who-comment .who-comment-info {
+                    margin-bottom: 1rem; }
+                   .post-card-footer .post-card-comments-list .who-comment .who-comment-info img {
+                      max-width: 4rem;
+                      width: 4rem;
+                      height: 4rem;
+                      object-fit: cover;
+                      margin-right: 1rem; }
+                   .post-card-footer .post-card-comments-list .who-comment .who-comment-info .who-comment-info-username {
+                      font-weight: bold;
+                      font-size: 1.4rem;
+                      color: #484848; }
+                 .post-card-footer .post-card-comments-list .who-comment .who-comment-info-description {
+                    font-size: 1.4rem; }
+            
+
+
+                  .commentBox {
+                     border: 1px solid #e8e8e8;
+                        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+                        border-radius: 5px;
+                  }
+
+                  .post-card-comments-list {
+                     overflow: scroll;
+                     flex-direction: column;
+                        padding: 2rem;
+                        position: relative;
+                        display:flex;
+                        height: auto;
+                        max-height:50vh;
+                margin:0px 6px;
+                    }
+                      .post-card-comments-list .who-comment {
+                          margin-bottom: 2rem; }
+                        .post-card-comments-list .who-comment:last-child {
+                            margin-bottom: 0; }
+                        .post-card-comments-list .who-comment .who-comment-info {
+                            margin-bottom: 1rem; }
+                          .post-card-comments-list .who-comment .who-comment-info img {
+                              max-width: 4rem;
+                              width: 4rem;
+                              height: 4rem;
+                              object-fit: cover;
+                              margin-right: 1rem; }
+                          .post-card-comments-list .who-comment .who-comment-info .who-comment-info-username {
+                              font-weight: bold;
+                              font-size: 1.4rem;
+                              color: #484848; }
+                        .post-card-comments-list .who-comment .who-comment-info-description {
+                            font-size: 1.4rem; }

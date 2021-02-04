@@ -98,7 +98,7 @@ function PostStandard(props) {
             <div className="comment-options">
               <i className="icon-camera" />
               <i className="icon-smile" />
-              <i className="icon-mic" />
+              {/* <i className="icon-mic" /> */}
             </div>
           </div>
         </div>
@@ -107,6 +107,7 @@ function PostStandard(props) {
         <CommentsBox comments={comments}/>
         </Collapse>
       </div>
+    
     </div>
   );
 }

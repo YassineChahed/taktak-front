@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import PropTypes from 'prop-types'
+import { NavLink } from 'react-router-dom';
 
 function Box(props) {
     const {showBox,handleClick} = props;
@@ -33,14 +34,18 @@ function Box(props) {
               </div>
               <div className="profile-list-setting">
                 <div className="profile-list-one-items">
+                  <NavLink exact to ="/profile">
                   <div className="item">
                     <i className="fal fa-user" />
                     <a href="user-foodlist-profile.html">Mon profile</a>
                   </div>
+                  </NavLink>
+                  <NavLink exact to ="/">
                   <div className="item">
                     <i className="fal fa-utensils-alt" />
                     <a>Mon Journal</a>
                   </div>
+                  </NavLink>
                   <div className="item">
                     <i className="fal fa-star" />
                     <a>Mes Besties</a>

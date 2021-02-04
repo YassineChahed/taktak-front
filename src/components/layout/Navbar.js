@@ -7,19 +7,22 @@ import Box from "./Box";
 import Stories from "../stories/Stories";
 import StorieFeedItem from "../stories/StorieFeedItem";
 
+
 function Navbar(props) {
   const [showBox, setShowBox] = useState(false)
   function handleClick(e) {
     e.preventDefault();
-    console.log("The link was clicked.");
+    // console.log("The link was clicked.");
     setShowBox(prev => !prev)
   }
-  // $(document).ready(function(){
-  //   $(".button-more").click(function(){
-  //     $(".box").fadeIn();
-  //     $('.chatt').fadeOut()
-  //   });
-  // });
+ 
+let stories  ;
+if (props.pathname==='/'){
+  stories = <Stories/>
+}
+else {stories=<></>}
+
+ 
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -124,7 +127,7 @@ function Navbar(props) {
           </div>
         </div>
       </div>
-      <Stories/>
+    {stories}
       {/* <StorieFeedItem/> */}
     </nav>
   );
